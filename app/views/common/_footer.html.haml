@@ -1,0 +1,33 @@
+.container-fluid.footer.index-footer
+  .container
+    .row
+      .col-sm-8.col-xs-12
+        .row.menu
+          .col-md-3.col-xs-12.menu-item=link_to "關於我們", '#'
+          .col-md-3.col-xs-12.menu-item=link_to "聯絡我們", '#'
+          .col-md-3.col-xs-12.menu-item=link_to "隱私條款", '#'
+          .col-md-3.col-xs-12.menu-item=link_to "取消條款", '#'
+      .col-sm-4.col-xs-12
+        .row.social
+          .social-item
+            .img_on= link_to image_tag("footer_ic_1.png"),'#', target: "_blank"
+            .img_off= link_to image_tag("footer_ic_1a.png"),'#', target: "_blank"
+          .social-item
+            .img_on= link_to image_tag("footer_ic_2.png"),'#', target: "_blank"
+            .img_off= link_to image_tag("footer_ic_2a.png"),'#', target: "_blank"
+          .social-item
+            .messenger.img_on= image_tag("footer_ic_3.png")
+            .messenger.img_off= image_tag("footer_ic_3a.png")
+          .social-item.fb-like.fb-like-count.fb_iframe_widget{"data-action" => "like", "data-href" => "https://www.facebook.com/ZaiDei2016", "data-layout" => "button_count", "data-share" => "false", "data-show-faces" => "true", "fb-iframe-plugin-query" => "action=like&app_id=764968406987805&container_width=85&href=https%3A%2F%2Fwww.facebook.com%2FZaidei2016&layout=button_count&locale=zh_TW&sdk=joey&share=false&show_faces=true", "fb-xfbml-state" => "rendered"}
+  .copyright
+    = "Copyright "
+    .fa.fa-copyright
+    -# = icon("copyright")
+    = " 2016 - 2017 TESLA All rights reserved."
+  -# = render 'common/chat'
+
+-# - content_for :javascripts do
+-#   :javascript
+-#     $(".messenger, .close").click(function() {
+-#       $(".chat").toggleClass("messenger-show");
+-#     });

@@ -1,0 +1,48 @@
+.footer
+  background-color: #fff
+  text-align: center
+  .menu
+    height: $footer-menu
+    font-size: 16px
+    @media screen and (min-width: 767px)
+      padding-top: 20px
+    .menu-item
+      font-size: 14px
+      line-height: 50px
+      transition: 1s
+    a
+      color: #3c3c3c
+      text-decoration: none
+      padding-left: 10px
+      padding-right: 10px
+      &:hover
+        border-left: solid 1px #3c3c3c
+        border-right: solid 1px #3c3c3c
+  .social
+    padding-top: 30px
+    padding-bottom: 15px
+    .social-item
+      display: inline-block
+      padding-right: 20px
+      .img_on
+        display: inherit
+      .img_off
+        display: none
+      &:hove
+        .img_on
+          display: none
+        .img_off
+          display: inherit
+  .messenger
+    display: inline-block
+    cursor: pointer
+  .copyright
+    font-size: 12px
+    height: $footer-copyright
+    width: 100%
+    color: white
+    text-align: center
+    line-height: 55px
+    background-color: $dark-bg
+.index-footer
+  padding: 0 !important

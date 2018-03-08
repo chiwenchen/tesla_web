@@ -1,0 +1,6 @@
+.container.product_gallery
+  .row
+    - 10.times do
+      - Product.all.each do |product|
+        .col-md-4
+          = image_tag product.main_image, class: 'image_wrapper'

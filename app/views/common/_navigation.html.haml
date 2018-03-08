@@ -1,0 +1,22 @@
+.container
+  .navbar
+    %ul.nav
+      = image_tag 'logo.png', size: '60x60', class: 'image'
+      .title TESLA
+    %ul.nav.justify-content-center
+      %li.nav-item
+        %a.nav-link.active Man
+      %li.nav-item
+        %a.nav-link.active Woman
+      %li.nav-item
+        %a.nav-link.active Loose
+      %li.nav-item
+        %a.nav-link.active Tight
+      - if current_user
+        %li.nav-item
+          %a.nav-link.active
+            %i.fa.fa-cart-plus
+        = current_user.username
+      - else
+        = link_to 'Sign in', new_user_session_path
+        = link_to 'Sign up', new_user_registration_path

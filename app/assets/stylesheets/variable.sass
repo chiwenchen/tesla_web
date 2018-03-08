@@ -1,0 +1,89 @@
+// color
+$base-green: green
+$grey-font: #999
+$grey-line: #CCC
+$gray-font: #333
+$white: #FFF
+$white-smoke: #f5f5f5
+$black: #e3e3e3e3
+$blue: #0000ff
+$base-color: #3c3c3c
+$gray-base:  #000 !default
+$gray:       lighten($gray-base, 33.5%) !default
+$gray-light: lighten($gray-base, 46.7%) !default
+$brand-danger:  #d9534f !default
+$mint: #45BD89
+$romance: #FEFEFE
+$background-color: #F8F8F8
+
+// color version 2
+$light-bg: #f6f8f8
+$dark-bg: #555
+$light-font: #b4b4b4
+$dark-font: #3c3c3c
+
+//font-size
+$standar: 14px
+$large: 30px
+
+//btn
+$btn-color: $base-color
+$btn-hover-color: #2F4F4F
+$btn-text-color: white
+
+// sizing
+$modal-width: 500px
+$form-element-height: 50px
+$navbar-height: 80px
+$footer-menu: 90px
+$footer-copyright: 60px
+$container-padding: $navbar-height
+
+// mixin functions
+@mixin block-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin block($height: 56%)
+  width: 100%
+  height: 0
+  padding-bottom: $height
+  box-sizing: border-box
+  overflow: hidden
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  position: relative
+
+@mixin font-size($large: 36px, $small: 24px)
+  font-size: $large
+  @media screen and (max-width: 540px)
+    font-size: $small
+
+@mixin base-header
+  color: $base-color
+  margin: 60px auto
+  @include font-size
+
+@mixin box-size($sizing: 33.3%)
+  width: $sizing
+  height: 100%
+
+@mixin basic-btn-style
+  border: 1px $grey-font solid
+  border-radius: 2px
+  width: 150px
+  height: 60px
+  text-align: center
+  display: inline-block
+  background-color: $light-bg
+  color: $dark-font
+  transition: 0.1s
+  &:hover
+    text-decoration: none
+    color: white
+    background-color: $dark-bg
+    label
+      color: white
