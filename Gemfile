@@ -36,6 +36,8 @@ gem 'bcrypt'
 
 gem 'cocoon'
 
+gem 'sidekiq'
+
 # 前端
 gem 'rails-assets-adminlte', source: 'https://rails-assets.org'
 
