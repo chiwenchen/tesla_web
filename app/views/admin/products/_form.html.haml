@@ -1,0 +1,25 @@
+.row
+  .col-sm-6
+    = simple_form_for [:admin, @product], class: 'inline-form' do |f|
+      .box.box-primary
+        .box-header.with-border
+          基本資訊
+        .box-body
+          .row
+            .col-md-6.form-group= f.input :name, input_html: {class: 'form-control'}, label: '商品名稱'
+            .col-md-6.form-group= f.input :product_code, input_html: {class: 'form-control'}, label: '型號'
+            .col-md-12.form-group= f.input :price, input_html: {class: 'form-control'}, label: '原價'
+            .col-md-12.form-group= f.input :description, input_html: {class: 'form-control'}, label: '商品描述'
+            .col-md-12.form-group= f.input :main_image, label: '商品主圖'
+      .box.box-success
+        .box-header.with-border
+          尺寸資訊
+        .box-body
+          #variants
+            = f.simple_fields_for :variants do |variant|
+              = render 'variant_fields', f: variant
+            .row
+              .links.col-md-12
+                = link_to_add_association f, :variants do
+                  .btn.btn-primary.btn-sm 新增尺寸及庫存
+      = f.submit '送出', class: 'btn btn-success'

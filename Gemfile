@@ -16,10 +16,10 @@ gem "pg", "~> 0.18"
 gem 'haml'
 
 gem 'devise'
-gem 'font-awesome-rails'
-# gem 'meta-tags'
-# gem 'rails-i18n', '~> 4.0.0'
-# gem 'settingslogic'
+gem 'font-awesome-sass', '~> 4.4.0'
+gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
+gem 'settingslogic'
 gem 'simple_form'
 gem 'kaminari'
 
@@ -34,6 +34,25 @@ gem 'devise-bootstrapped'
 gem 'royce'
 gem 'bcrypt'
 
+gem 'cocoon'
+
+# 前端
+gem 'rails-assets-adminlte', source: 'https://rails-assets.org'
+
+group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'meta_request'
+  gem 'better_errors'
+  gem 'letter_opener'
+  gem 'capistrano',  '~> 3.4'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+  gem 'capistrano-faster-assets'
+  gem 'capistrano-sidekiq'
+end
+
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug' #same as pry-nav, but supporting ruby 2+
@@ -45,6 +64,7 @@ group :development, :test do
   gem 'capybara-email'
   gem 'launchy'
   gem 'better_errors'
+  gem 'binding_of_caller'
 
   gem "factory_girl_rails"
   gem 'faker'

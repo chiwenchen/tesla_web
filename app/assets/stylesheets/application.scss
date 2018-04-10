@@ -11,12 +11,19 @@
  * file per style scope.
  *
  */
-
- // @import 'style.css';
- // @import 'default.css';
- @import 'variable';
- @import 'font-awesome';
- @import 'home/*';
+@import "adminlte";
+@import "adminlte-skins.min";
+@import "alt/AdminLTE-bootstrap-social.min";
+@import "alt/AdminLTE-fullcalendar.min";
+@import "alt/AdminLTE-select2.min";
+@import "alt/AdminLTE-without-plugins.min";
+@import 'variable';
+@import "home/*";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datepicker3";
 
 .bg {
   min-height: 600px;
@@ -25,5 +32,8 @@
   margin-top: 30px;
   text-align: center !important;
   background-color: #7777;
+}
+.float-right {
+  float: right;
 }
 .container { width: 1920px !important; }

@@ -19,6 +19,6 @@ class Variant < ActiveRecord::Base
     xl: 3,
     xxl: 4
   }
-
+  validates :size, presence: true, uniqueness: { scope: :product_id }
   belongs_to :product
 end

@@ -1,0 +1,22 @@
+.row
+  .col-md-12
+    .box
+      .box-header.with-border
+        %strong 商品列表
+      .box-body
+        %table.table.table-bordered
+          %thead
+            %tr
+              %th product code
+              %th name
+              %th price
+              %th main_image
+              %th Action
+          %tbody
+            - @products.each do |product|
+              %tr
+                %td= product.product_code
+                %td= product.name
+                %td= product.price
+                %td= image_tag(product.main_image, size: '80x40')
+                %td= link_to '編輯', edit_admin_product_path(product)

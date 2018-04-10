@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require custom
+//= require adminlte
+//= require bootstrap-sprockets
+//= require bootstrap-datepicker
+//= require cocoon
 //= require_tree .
+//= require_self

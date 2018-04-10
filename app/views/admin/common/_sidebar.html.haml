@@ -1,0 +1,7 @@
+%aside.main-sidebar
+  %section.sidebar
+    %ul.nav.sidebar-menu.tree
+      - if true
+        %li.header Product
+        %li.item= link_to "商品列表", admin_root_path
+        %li.item= link_to "新增商品", new_admin_product_path

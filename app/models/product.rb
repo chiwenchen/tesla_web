@@ -16,4 +16,5 @@ class Product < ActiveRecord::Base
   has_many :categories, through: :category_associations
   has_many :category_associations
   has_many :variants
+  accepts_nested_attributes_for :variants, reject_if: :all_blank, allow_destroy: true
 end
