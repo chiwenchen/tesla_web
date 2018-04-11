@@ -26,4 +26,6 @@ class User < ActiveRecord::Base
 
   has_one :shopping_cart, -> { where(status: Cart.statuses[:shopping]) }, class_name: 'Cart'
   has_many :checked_out_carts, -> { where(status: Cart.statuses[:checked_out]) }, class_name: 'Cart'
+
+  royce_roles %w[ admin ]
 end

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, skip: :registrations
   root 'home#index'
 
   resources :products
 
-  resources :users, only: [:create]
+  resources :users, only: [:new, :create]
 
   namespace :admin do
     root to: 'products#index'

@@ -3,9 +3,7 @@
 
     <h1 class="text-center">Sign Up</h1>
     <hr>
-    <%= form_for(resource, as: resource_name, url: users_path) do |f| %>
-      <%= devise_error_messages! %>
-
+    <%= simple_form_for(@user) do |f| %>
       <div class="form-group">
         <%= f.label :username %><br />
         <%= f.text_field :username, autofocus: false, class: 'form-control' %>
@@ -33,8 +31,5 @@
         <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
       </div>
     <% end %>
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
-    </div>
   </div>
 </div>
