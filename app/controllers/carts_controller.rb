@@ -1,4 +1,9 @@
 class CartsController < ApplicationController
+
+  def show
+    @shopping_cart = current_user.shopping_cart
+  end
+
   def add_item_to_cart
     return if params[:variant_id].nil?
     variant = Variant.find params[:variant_id]
