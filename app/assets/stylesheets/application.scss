@@ -26,7 +26,12 @@
 @import "bootstrap-datepicker3";
 
 .bg {
-  min-height: 600px;
+  width: 100%;
+  min-width: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 66.64%;
 }
 .title_1 {
   margin-top: 30px;
