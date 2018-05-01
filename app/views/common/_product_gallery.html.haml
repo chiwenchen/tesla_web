@@ -3,4 +3,6 @@
     - Product.all.each do |product|
       .col-md-4.col-sm-4
         = link_to product_path(product) do
-          = image_tag product.main_image, class: 'image_wrapper'
+          .image= image_tag product.main_image, class: 'image_wrapper'
+          .name= product.name
+          .price= product.price
