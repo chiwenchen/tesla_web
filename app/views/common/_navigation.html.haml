@@ -1,7 +1,8 @@
 .contain-fluid
   .navbar
     .navbar-header
-      = image_tag 'logo2.png', size: '120x60', class: 'image'
+      = link_to root_path do
+        = image_tag 'logo2.png', size: '120x60', class: 'image'
     %ul.nav.justify-content-center
       %li.nav-item
         %a.nav-link.active.link Man
