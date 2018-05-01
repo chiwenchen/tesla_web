@@ -1,7 +1,6 @@
 .container.product_gallery
   .row
-    - 10.times do
-      - Product.all.each do |product|
-        .col-md-4
-          = link_to product_path(product) do
-            = image_tag product.main_image, class: 'image_wrapper'
+    - Product.all.each do |product|
+      .col-md-4.col-sm-4
+        = link_to product_path(product) do
+          = image_tag product.main_image, class: 'image_wrapper'

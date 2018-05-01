@@ -6,11 +6,10 @@
       %h2.header 男裝精選
       .bg(style="background-image: url(#{asset_path('header.jpg')})")
       .row
-        - 10.times do
-          - @products.each do |product|
-            .col-md-3.product
-              = image_tag product.main_image, class: 'image_wrapper'
-              .introduction
-                .size_list L
-                .name= product.name
-                .price 1000 NT
+        - @products.each do |product|
+          .col-md-3.product
+            = image_tag product.main_image, class: 'image_wrapper'
+            .introduction
+              .size_list L
+              .name= product.name
+              .price 1000 NT

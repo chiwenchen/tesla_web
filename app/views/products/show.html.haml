@@ -11,5 +11,26 @@
       .buy-button
         = link_to '點此購買', '#', class: 'btn btn-warning btn-lg btn-custom'
   .row
-    .description
-      = @product.description
+    .col-md-12
+      .product_introduce
+        = image_tag 'promote_1.jpg', class: 'basic_image'
+  .row
+    .col-md-12
+      .description
+        = @product.description
+  .row
+    .col-md-12
+      .product_introduce
+        = image_tag 'promote_2.jpg', class: 'basic_image vertical_margin'
+  .row
+    .col-md-12
+      .product_introduce
+        = image_tag 'promote_3.jpg', class: 'basic_image vertical_margin'
+  .row
+    .col-md-12
+      .product_introduce
+        = image_tag 'promote_4.jpg', class: 'basic_image vertical_margin'
+  .row
+    .col-md-12
+      .shopping_guide
+        = image_tag 'shopping_guide.jpg', class: 'basic_image vertical_margin'
