@@ -1,23 +1,24 @@
-.container
+.contain-fluid
   .navbar
-    %ul.nav
-      = image_tag 'logo.png', size: '60x60', class: 'image'
-      .title TESLA
+    .navbar-header
+      = image_tag 'logo2.png', size: '120x60', class: 'image'
     %ul.nav.justify-content-center
       %li.nav-item
-        %a.nav-link.active Man
+        %a.nav-link.active.link Man
       %li.nav-item
-        %a.nav-link.active Woman
+        %a.nav-link.active.link Woman
       %li.nav-item
-        %a.nav-link.active Loose
+        %a.nav-link.active.link Loose
       %li.nav-item
-        %a.nav-link.active Tight
+        %a.nav-link.active.link Tight
       - if current_user
         %li.nav-item
           %a.nav-link.active
-            %i.fa.fa-cart-plus
-        = current_user.username
-        = link_to '後台', admin_root_path
+            %i.fa.fa-cart-plus.fa-lg
+        %li.nav-item
+          %a.nav-link.active.link= "Hi, #{current_user.username}"
+        %li.nav-item
+          .btn.btn-default= link_to '後台', admin_root_path, class: 'nav-link active link'
       - else
         = link_to 'Sign in', new_user_session_path
         = link_to 'Sign up', new_user_path

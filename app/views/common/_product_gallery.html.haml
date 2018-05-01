@@ -3,4 +3,5 @@
     - 10.times do
       - Product.all.each do |product|
         .col-md-4
-          = image_tag product.main_image, class: 'image_wrapper'
+          = link_to product_path(product) do
+            = image_tag product.main_image, class: 'image_wrapper'

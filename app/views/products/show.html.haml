@@ -1,0 +1,15 @@
+.container.product_show
+  .row
+    .col-md-6
+      .image
+        = image_tag @product.main_image, class: 'basic_image product_image'
+    .col-md-6
+      .title
+        = @product.name
+      .price
+        = '$NT 1000'
+      .buy-button
+        = link_to '點此購買', '#', class: 'btn btn-warning btn-lg btn-custom'
+  .row
+    .description
+      = @product.description

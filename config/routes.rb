@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, skip: :registrations
   root 'home#index'
 
-  resources :products
+  resources :products, only: [:index, :show]
 
   resources :users, only: [:new, :create]
 
