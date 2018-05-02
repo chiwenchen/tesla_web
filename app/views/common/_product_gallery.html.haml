@@ -1,8 +1,11 @@
 .container.product_gallery
-  .row
-    - Product.all.each do |product|
-      .col-md-4.col-sm-4
-        = link_to product_path(product) do
-          .image= image_tag product.main_image, class: 'image_wrapper'
-          .name= product.name
-          .price= product.price
+  - Category.all.each do |category|
+    .row.category_title
+      = category.title
+    .row.product_index
+      - category.products.each do |product|
+        .col-md-3.col-sm-3
+          = link_to product_path(product) do
+            .image= image_tag product.main_image, class: 'image_wrapper'
+            .name= product.name
+            .price= "$#{product.price}"
