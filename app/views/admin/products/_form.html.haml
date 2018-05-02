@@ -11,6 +11,7 @@
             .col-md-12.form-group= f.input :price, input_html: {class: 'form-control'}, label: '原價'
             .col-md-12.form-group= f.input :description, input_html: {class: 'form-control'}, label: '商品描述'
             .col-md-12.form-group= f.input :main_image, label: '商品主圖'
+            .col-md-12.form-group= f.association :categories, as: :check_boxes
       .box.box-success
         .box-header.with-border
           尺寸資訊

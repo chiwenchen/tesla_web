@@ -1,0 +1,13 @@
+.row
+  .col-md-12
+    .box
+      .box-header.with-border
+        %strong 分類列表
+      .box-body
+        %table.table.table-bordered
+          %thead
+            %tr TITLE
+          %tbody
+            - @categories.each do |category|
+              %tr
+                %td= category.title

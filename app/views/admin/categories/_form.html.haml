@@ -1,0 +1,11 @@
+.row
+  .col-sm-6
+    = simple_form_for [:admin, @category], class: 'inline-form' do |f|
+      .box.box-primary
+        .box-header.with-border
+          基本資訊
+        .box-body
+          .row
+            .col-md-6.form-group
+              = f.input :title, input_html: {class: 'form-control'}, label: '商品名稱'
+              = f.submit '送出', class: 'btn btn-success'
